@@ -1,5 +1,4 @@
 <!--Able to click through the # of banners -->
-function bannerSwitcher(){
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -42,5 +41,4 @@ function carousel() {
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 7000); // Change image every 7 seconds
-}
 }
