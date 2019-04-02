@@ -1,0 +1,160 @@
+<script>
+var currentDate = new Date();
+var currentMonth = currentDate.getMonth();
+var currentDay = currentDate.getDay();
+var currentHour = currentDate.getHours();
+var currentMinute = currentDate.getMinutes();
+document.addEventListener('DOMContentLoaded', function() {
+  var friday = document.getElementById('friday');
+  var monThurs = document.getElementById("mon-thurs");
+  var open = document.getElementById("open");
+  var closed = document.getElementById("closed");
+
+  function openClose() {
+    //reset display each time this function runs
+    [monThurs, friday, open, closed].forEach(function(element) {
+      element.classList.remove('hidden');
+    });
+    if (currentDay >= 1 && currentDay <= 4) {
+      friday.classList.add('hidden');
+      if (currentHour >= 8 && currentHour <= 21) {
+        closed.classList.add('hidden');
+      } else {
+        open.classList.add('hidden');
+      }
+    }
+    if (currentDay === 5) {
+      monThurs.classList.add('hidden');
+      if (currentHour >= 8 && currentHour <= 17.5) {
+        closed.classList.add('hidden');
+      } else {
+        open.classList.add('hidden');
+      }
+    }
+    if (currentDay === 0 || currentDay === 6) {
+      open.classList.add('hidden');
+      friday.classList.add('hidden');
+    }
+  };
+
+  setInterval(openClose, 5000);
+  openClose();
+});
+</script>
+<style>
+.layout-header .header-one #open,
+.layout-header .header-one #closed,
+.layout-header .header-one #friday,
+.layout-header .header-one #mon-thurs {
+  display: inline-block;
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+<!-------------------------REAL CODE-------------------------------->
+<div id="open-display">
+  <div id="open">Open</div>
+  <div id="closed">Closed</div>
+  <div id="mon-thurs"><!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<!--Displays # of Banners on a given page -->
+<body>
+<div class="w3-content w3-display-container" style="max-width:2560px">
+  <a href="https://sites.google.com/view/troyanime/the-rising-of-the-shield-hero"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/davidcarbongaming/anime-banners/master/banners/The_Rising_of_the_Shield_Hero.png" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/domestic-na-kanojo-domestic-girlfriend"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/davidcarbongaming/anime-banners/master/banners/Domestic_na_Kanojo.png" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/TV-MA/dororo-2019"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/davidcarbongaming/anime-banners/master/banners/Dororo_2.png" style="width:100%"></a>
+<!--Newly Uploaded Series Goes Above Here-->
+<a href="https://sites.google.com/view/troyanime/TV-MA/kakegurui-compulsive-gambler-2nd-season"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Kakegurui_xx.png" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/akame-ga-kill"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Akame-ga-Kill.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/land-of-the-lustrous"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Land-of-the-Lustrous.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/new-game"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/NEW-GAME-2.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/your-name-kimi-no-na-wa"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Your-Name.-Movie.jpg" style="width:100%"></a>
+<!--BEFORE NEW BANNER CODE, Series Are below Here-->
+  <a href="https://sites.google.com/view/troyanime/jojos-bizarre-adventure-vento-aureo"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/JoJos-Bizarre-Adventure---Golden-Wind.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/little-witch-academia"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Little-Witch-Academia-TV.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/ssss-gridman"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/SSSS-Gridman.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/anohana"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/AnoHana.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/mob-psycho-100"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Mob-Psycho-100.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/made-in-abyss"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Made-in-Abyss.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/that-time-i-got-reincarnated-as-a-slime"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/That-Time-I-Got-Reincarnated-as-a-Slime.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/rascal-does-not-dream-of-bunny-girl-senpai"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Rascal-Does-Not-Dream-of-Bunny-Girl-Senpai.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/TV-MA/baki"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Baki.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/radiant"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Radiant.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/steinsgate"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Steins-Gate-0.gif" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/clean-freak-aoyama-kun"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Clean-Freak-Aoyama-kun.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/re-zero-beginning-life-in-another-world"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Re-ZERO--Starting-Life-in-Another-World-.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/bloom-into-you"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/Bloom-Into-You.jpg" style="width:100%"></a>
+  <a href="https://sites.google.com/view/troyanime/the-seven-deadly-sins"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/The-Seven-Deadly-Sins.jpg" style="width:100%"></a>
+<!-- Templates for Newly Uploaded Series Are Below	
+	<a href="https://troyanime.ml/hanebado"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/ah_res_slide_guidelines.png" style="width:100%"></a>
+	<a href="https://troyanime.ml/hanebado"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/ah_res_slide_guidelines.png" style="width:100%"></a>
+	<a href="https://troyanime.ml/hanebado"><img class="mySlides w3-animate-opacity" src="https://raw.githubusercontent.com/1DavidCarbon/website-assets/master/websites/Troyclub/images/banners/ah_res_slide_guidelines.png" style="width:100%"></a>
+-->								
+	<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+  </div>
+</div>
+<!--Able to click through the # of banners -->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-transparent", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-transparent";
+}
+</script>
+<!--Transition # of banners-->
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 7000); // Change image every 7 seconds
+}
+</script>
+<!-- Created with Love by DavidCarbon -->
+</body>
+</html> 
+</div>
+  <div id="friday">Sales: 8am - 5:30pm</div>
+</div>
+<!-----------------------END REAL CODE------------------------------>
