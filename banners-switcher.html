@@ -15,8 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
     [monThurs, friday, open, closed].forEach(function(element) {
       element.classList.remove('hidden');
     });
-    if (currentDay >= 1 && currentDay <= 4) {
+    //When setting to = (its equal to that time) [Old Code:  && currentDay <= 2]
+    if (currentDay = 1) {
       friday.classList.add('hidden');
+      // currentHour is based on hourly time
       if (currentHour >= 8 && currentHour <= 21) {
         closed.classList.add('hidden');
       } else {
